@@ -1,0 +1,123 @@
+.password-item-container {
+  display: flex;
+  flex-direction: row;
+  border: solid;
+  border-color: #c3caea;
+  border-width: 1px;
+  padding: 5px;
+  margin: 5px;
+  width: 200px;
+  height: 80px;
+}
+.initial-container {
+  border-radius: 50px;
+  height: 35px;
+  width: 50px;
+  color: white;
+  margin-top: 20px;
+  text-align: center;
+  padding-top: 5px;
+}
+.website-password-container {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 12px;
+  width: 150px;
+  margin-left: 10px;
+}
+.delete-button {
+  border: none;
+  background-color: transparent;
+}
+.delete-icon {
+  height: 15px;
+  width: 15px;
+}
+.text {
+  margin: 0px;
+  font-size: 10px;
+  padding: 5px;
+}
+.purple {
+  background-color: #7683cb;
+  border-radius: 50px;
+  height: 35px;
+  width: 50px;
+  color: white;
+  margin-top: 20px;
+  text-align: center;
+  padding-top: 5px;
+}
+.orange {
+  background-color: #f59e0b;
+  border-radius: 50px;
+  height: 35px;
+  width: 50px;
+  color: white;
+  margin-top: 20px;
+  text-align: center;
+  padding-top: 5px;
+}
+.green {
+  background-color: #10b981;
+  border-radius: 50px;
+  height: 35px;
+  width: 50px;
+  color: white;
+  margin-top: 20px;
+  text-align: center;
+  padding-top: 5px;
+}
+.brown {
+  background-color: #f97316;
+  border-radius: 50px;
+  height: 35px;
+  width: 50px;
+  color: white;
+  margin-top: 20px;
+  text-align: center;
+  padding-top: 5px;
+}
+.teal {
+  background-color: #14b8a6;
+  border-radius: 50px;
+  height: 35px;
+  width: 50px;
+  color: white;
+  margin-top: 20px;
+  text-align: center;
+  padding-top: 5px;
+}
+.red {
+  background-color: #b91c1c;
+  border-radius: 50px;
+  height: 35px;
+  width: 50px;
+  color: white;
+  margin-top: 20px;
+  text-align: center;
+  padding-top: 5px;
+}
+.light-blue {
+  background-color: #0ea5e9;
+  border-radius: 50px;
+  height: 35px;
+  width: 50px;
+  color: white;
+  margin-top: 20px;
+  text-align: center;
+  padding-top: 5px;
+}
+.stars {
+  width: 80px;
+  padding: 5px;
+}
+.no-password-image {
+  width: 250px;
+  height: 250px;
+}
+.no-passwords-heading {
+  font-size: 15px;
+  color: white;
+}
