@@ -8,22 +8,10 @@ class PasswordItem extends Component {
     deleteItem(id)
   }
 
-  passwordsDisplay = () => {
-    const {passwordDetails, showPassword, noPassword} = this.props
+  render() {
+    const {passwordDetails, showPassword} = this.props
     const {website, username, password, initialColor} = passwordDetails
 
-    if (noPassword === false) {
-      return (
-        <div>
-          <img
-            className="no-password-image"
-            alt="no password"
-            src="https://assets.ccbp.in/frontend/react-js/no-passwords-img.png"
-          />
-          <h1 className="no-passwords-heading">No Passwords</h1>
-        </div>
-      )
-    }
     return (
       <li>
         <div className="password-item-container">
@@ -41,24 +29,22 @@ class PasswordItem extends Component {
               />
             )}
           </div>
-          <button
-            className="delete-button"
-            type="button"
-            onClick={this.onClickDelete}
-          >
-            <img
-              className="delete-icon"
-              alt="delete"
-              src="https://assets.ccbp.in/frontend/react-js/password-manager-delete-img.png"
-            />
-          </button>
+          <div className="delete-button-container">
+            <button
+              className="delete-button"
+              type="button"
+              onClick={this.onClickDelete}
+            >
+              <img
+                className="delete-icon"
+                alt="delete"
+                src="https://assets.ccbp.in/frontend/react-js/password-manager-delete-img.png"
+              />
+            </button>
+          </div>
         </div>
       </li>
     )
-  }
-
-  render() {
-    return <div>{this.passwordsDisplay()}</div>
   }
 }
 export default PasswordItem
