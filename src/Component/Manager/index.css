@@ -24,7 +24,7 @@
   background-color: #5763a5;
   border-radius: 5px;
   width: 700px;
-  height: 300px;
+  height: 330px;
   display: flex;
   flex-direction: row;
   margin-bottom: 20px;
@@ -59,7 +59,7 @@
   background-color: white;
 }
 .input-text {
-  color: #94a3b8;
+  color: #64748b;
   font-size: 12px;
   width: 150px;
   height: 25px;
@@ -167,4 +167,19 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.no-password-image {
+  width: 200px;
+  height: 200px;
+}
+.no-passwords-heading {
+  font-size: 15px;
+  color: white;
+}
+.no-passwords-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
