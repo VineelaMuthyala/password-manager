@@ -21,7 +21,7 @@ class Manager extends Component {
     password: '',
     showPassword: false,
     searchValue: '',
-    noPassword: false,
+    noPassword: true,
   }
 
   addWebsite = event => {
@@ -38,6 +38,7 @@ class Manager extends Component {
 
   onClickAddNewPassword = event => {
     event.preventDefault()
+
     const initialColor =
       initialBackgroundColorlist[
         Math.ceil(Math.random() * initialBackgroundColorlist.length - 1)
@@ -53,7 +54,7 @@ class Manager extends Component {
     this.setState(prevState => ({
       userDetailsList: [...prevState.userDetailsList, newUserDetails],
     }))
-    this.setState({website: '', username: '', password: ''})
+    this.setState({website: '', username: '', password: '', noPassword: false})
   }
 
   onClickshowPassword = () => {
@@ -70,6 +71,17 @@ class Manager extends Component {
     this.setState({searchValue: event.target.value})
   }
 
+  noPasswordDisplay = () => (
+    <div className="no-passwords-container">
+      <img
+        className="no-password-image"
+        alt="no passwords"
+        src="https://assets.ccbp.in/frontend/react-js/no-passwords-img.png "
+      />
+      <p className="no-passwords-heading">No Passwords</p>
+    </div>
+  )
+
   render() {
     const {
       website,
@@ -83,6 +95,21 @@ class Manager extends Component {
 
     const searchResult = userDetailsList.filter(eachItem =>
       eachItem.website.toLowerCase().includes(searchValue.toLowerCase()),
+    )
+
+    const condition = noPassword || searchResult.length === 0
+
+    const passwordsDisplay = (
+      <ul className="unordered-list">
+        {searchResult.map(eachItem => (
+          <PasswordItem
+            key={eachItem.id}
+            passwordDetails={eachItem}
+            showPassword={showPassword}
+            deleteItem={this.deleteItem}
+          />
+        ))}
+      </ul>
     )
 
     return (
@@ -144,6 +171,7 @@ class Manager extends Component {
                 className="add-button"
                 type="submit"
                 onClick={this.onClickAddNewPassword}
+                data-testid="delete"
               >
                 Add
               </button>
@@ -188,17 +216,7 @@ class Manager extends Component {
                 Show Passwords
               </label>
             </div>
-            <ul className="unordered-list">
-              {searchResult.map(eachItem => (
-                <PasswordItem
-                  key={eachItem.id}
-                  passwordDetails={eachItem}
-                  showPassword={showPassword}
-                  noPassword={noPassword}
-                  deleteItem={this.deleteItem}
-                />
-              ))}
-            </ul>
+            {condition ? this.noPasswordDisplay() : passwordsDisplay}
           </div>
         </div>
       </div>
