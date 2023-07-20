@@ -26,6 +26,9 @@
   width: 150px;
   margin-left: 10px;
 }
+.delete-button-container {
+  padding-top: 25px;
+}
 .delete-button {
   border: none;
   background-color: transparent;
@@ -112,12 +115,4 @@
 .stars {
   width: 80px;
   padding: 5px;
-}
-.no-password-image {
-  width: 250px;
-  height: 250px;
-}
-.no-passwords-heading {
-  font-size: 15px;
-  color: white;
 }
